@@ -1,0 +1,21 @@
+server:
+  port: 3005
+  # GZIP
+  compression:
+    enabled: true
+    # The comma-separated list of mime types that should be compressed
+    mime-types: application/json,application/vnd.ms-excel,application/octet-stream
+    # Compress the response only if the response size is at least 1KB
+    min-response-size: 1024
+
+spring:
+  profiles:
+    active: local #默认启动本地开发环境
+  application:
+    name: registration_center  #服务名称
+
+logging:
+  level:
+    ROOT: info
+    org.springframework: info
+    org.springframework.boot: info
